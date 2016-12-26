@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pivot</title>
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #pivotContainer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Flexmonster -->
+    <script src="https://s3.amazonaws.com/flexmonster/2.3/flexmonster.js"></script></head>
+<body>
+    <div id="pivotContainer"></div>
+    <script type="text/javascript">
+            var pivot = $("#pivotContainer").flexmonster({
+                licenseKey: "Z7WC-XDE771-2X454J-4Y6E0I",
+                toolbar: true,
+                report: "https://s3.amazonaws.com/flexmonster/2.3/reports/report.json",
+                reportcomplete: function() {
+                    pivot.off("reportcomplete");
+                    generateExcel();
+                },
+                exportcomplete: function() {
+                    pivot.off("exportcomplete");
+                    pivot.exportcomplete = generatePDF;
+                }
+            });
+
+        function generateExcel() {
+            var params = {
+              filename : 'export.xlsx', 
+              destinationType : 'server',
+              url : 'http://localhost:8080/pivot/save.php'
+            };
+            pivot.exportTo('Excel', params);   
+        }
+
+        function generateHTML() {
+            var params = {
+              filename : 'export.html', 
+              destinationType : 'server',
+              url : 'http://localhost:8080/pivot/save.php'
+            };
+            pivot.exportTo('html', params);   
+        }
+
+        function generatePDF() {
+            var params = {
+              filename : 'export.pdf', 
+              destinationType : 'server',
+              url : 'http://localhost:8080/pivot/save.php'
+            };
+            pivot.exportTo('PDF', params);   
+        }
+
+    </script>
+</body>
+
+</html>
