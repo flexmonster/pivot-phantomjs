@@ -1,4 +1,4 @@
-# pivot-phantomjs
+# Exporting from Flexmonster Pivot Table and Charts component on the server without using a browser
 [![Flexmonster Pivot table component](https://s3.amazonaws.com/flexmonster/github/fm-github-cover.png)](http://flexmonster.com)
 Website: www.flexmonster.com
 
