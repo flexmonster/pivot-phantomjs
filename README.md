@@ -8,5 +8,5 @@ PhantomJS can be downloaded from here: http://phantomjs.org/download.html
 
 The sample includes:
 - Script file `pivot.js` for PhantomJS. Usage from the command line: `phantomjs pivot.js`.
-- Pivot component itself with necessary API calls for an export generation in the `index.html` file.
+- The pivot table component itself with necessary API calls for an export generation in the `index.html` file.
 - Very simple `save.php` sample for generated files saving.
