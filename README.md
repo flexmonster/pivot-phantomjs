@@ -1,6 +1,8 @@
 # Exporting from Flexmonster Pivot Table & Charts on the server without using a browser
-[![Flexmonster Pivot table component](https://s3.amazonaws.com/flexmonster/github/fm-github-cover.png)](http://flexmonster.com)
+[![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/landing.png)](https://flexmonster.com)
 Website: www.flexmonster.com
+
+### :warning: Note: since PhantomJS development [is suspended](https://github.com/ariya/phantomjs/issues/15344), we recommend using Puppeteer for exporting from Flexmonster without a browser. See the sample project: [Use Flexmonster with Puppeteer](https://github.com/flexmonster/pivot-puppeteer/).
 
 This repository holds the sample of how to export from Flexmonster Pivot Table & Charts on the server without using a browser by means of [PhantomJS](http://phantomjs.org/).
 
