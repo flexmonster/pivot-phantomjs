@@ -1,4 +1,4 @@
-# Exporting from Flexmonster Pivot Table & Charts on the server without using a browser
+# Use Flexmonster Pivot Table & Charts with PhantomJS
 [![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/landing.png)](https://flexmonster.com)
 Website: www.flexmonster.com
 
